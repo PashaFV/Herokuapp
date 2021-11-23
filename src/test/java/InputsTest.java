@@ -3,14 +3,14 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.*;
 
 
 public class InputsTest extends BaseTest {
 
 
     @Test
-    public void InputPozitiveDigits() {
+    public void inputPozitiveDigits() {
         driver.get("http://the-internet.herokuapp.com/inputs");
         WebElement inputNumbers = driver.findElement(By.tagName("input"));
         inputNumbers.sendKeys("100500");
@@ -22,7 +22,7 @@ public class InputsTest extends BaseTest {
     }
 
     @Test
-    public void InputNegativeDigits() {
+    public void inputNegativeDigits() {
         driver.get("http://the-internet.herokuapp.com/inputs");
         WebElement inputNumbers = driver.findElement(By.tagName("input"));
         inputNumbers.sendKeys("-1");

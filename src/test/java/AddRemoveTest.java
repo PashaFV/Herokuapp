@@ -6,12 +6,12 @@ import java.util.List;
 
 import static org.testng.Assert.*;
 
-public class AddRemoveTest extends BaseTest{
+public class AddRemoveTest extends BaseTest {
 
     String deleteButtonLocator = "[onclick='deleteElement()']";
 
     @Test
-    public void addRemoveElements(){
+    public void addAndRemoveElements() {
         driver.get("http://the-internet.herokuapp.com/add_remove_elements/");
         WebElement addButton = driver.findElement(By.cssSelector("[onclick='addElement()']"));
         addButton.click();

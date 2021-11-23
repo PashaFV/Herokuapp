@@ -11,7 +11,7 @@ import static org.testng.Assert.*;
 public class DropdownTest extends BaseTest {
 
     @Test
-    public void SelectAnOption() {
+    public void selectAnOption() {
         driver.get("http://the-internet.herokuapp.com/dropdown");
         driver.findElement(By.id("dropdown")).click();
         driver.findElement(By.cssSelector("[value='1']")).click();

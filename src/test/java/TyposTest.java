@@ -8,10 +8,11 @@ public class TyposTest extends BaseTest {
 
 
     @Test
-    public void TyposCheck() {
+    public void typosSpellCheck() {
         driver.get("https://the-internet.herokuapp.com/typos");
-        WebElement CheckText = driver.findElement(By.tagName("p"));
-        assertEquals("Sometimes you'll see a typo, other times you won't.", CheckText.getText(), "There is a spelling error in the text");
+        //WebElement CheckSpell = driver.findElement(By.tagName("p"));
+        String spellCheck = driver.findElement(By.xpath("//*[@id=\"content\"]/div/p[2]")).getText();
+        assertEquals(spellCheck, "Sometimes you'll see a typo, other times you won't.", "There is a spelling error in the text");
 
     }
 
